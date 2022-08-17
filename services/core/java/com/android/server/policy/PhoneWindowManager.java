@@ -1546,6 +1546,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         }
     };
 
+    private void handleScreenShot(@WindowManager.ScreenshotType int type,
+            @WindowManager.ScreenshotSource int source) {
+        mDefaultDisplayPolicy.takeScreenshot(type, source);
+    }
+
     private class ScreenshotRunnable implements Runnable {
         private int mScreenshotType = TAKE_SCREENSHOT_FULLSCREEN;
         private int mScreenshotSource = SCREENSHOT_KEY_OTHER;
