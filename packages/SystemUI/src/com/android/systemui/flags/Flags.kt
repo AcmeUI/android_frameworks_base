@@ -405,7 +405,7 @@ object Flags {
     @Keep
     @JvmField
     val WM_ENABLE_PREDICTIVE_BACK_ANIM =
-        sysPropBooleanFlag(1201, "persist.wm.debug.predictive_back_anim", default = false)
+        sysPropBooleanFlag(1201, "persist.wm.debug.predictive_back_anim", default = true)
 
     @Keep
     @JvmField
@@ -414,7 +414,7 @@ object Flags {
 
     // TODO(b/254512728): Tracking Bug
     @JvmField
-    val NEW_BACK_AFFORDANCE = unreleasedFlag(1203, "new_back_affordance", teamfood = false)
+    val NEW_BACK_AFFORDANCE = sysPropBooleanFlag(1203, "persist.wm.debug.new_back_affordance", default = true)
 
     // TODO(b/255854141): Tracking Bug
     @JvmField
